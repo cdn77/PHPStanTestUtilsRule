@@ -1,0 +1,40 @@
+{
+	"name": "cdn77/phpstan-test-utils-rule",
+	"description": "A PHPStan rule to be used with the cdn77/test-utils package",
+	"license": "MIT",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"type": "phpstan-extension",
+	"extra": {
+		"phpstan": {
+			"includes": [
+				"extension.neon"
+			]
+		}
+	},
+	"require": {
+		"php": "^7.2",
+		"phpstan/phpstan": "^0.10|^0.11",
+		"phpstan/phpdoc-parser": "^0.3",
+		"nikic/php-parser": "^4.0"
+	},
+	"require-dev": {
+        "cdn77/coding-standard": "^2.0",
+		"jakub-onderka/php-parallel-lint": "^1.0",
+		"phing/phing": "^2.16.0",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan-strict-rules": "^0.11.1",
+        "phpstan/phpstan-phpunit": "^0.11.2",
+		"phpunit/phpunit": "^8"
+	},
+	"autoload": {
+		"psr-4": {
+			"Cdn77\\TestUtils\\PHPStan\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Cdn77\\TestUtils\\PHPStan\\Tests\\": "tests/"
+		}
+	}
+}
