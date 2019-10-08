@@ -29,7 +29,9 @@ abstract class CreateStubExtension implements DynamicMethodReturnTypeExtension
         Scope $scope
     ) : Type {
         $classConstFetch = $methodCall->args[0]->value;
-        assert($classConstFetch instanceof ClassConstFetch);
+        if (! $classConstFetch instanceof ClassConstFetch) {
+            return new ObjectType('object');
+        }
 
         $fullyQualified = $classConstFetch->class;
         assert($fullyQualified instanceof FullyQualified);
