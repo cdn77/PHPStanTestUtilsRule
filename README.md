@@ -1,6 +1,6 @@
 # Cdn77 PHPStan TestUtils Rule
 
-[![Build Status](https://travis-ci.com/cdn77/PHPStanTestUtilsRule.svg)](https://travis-ci.com/cdn77/PHPStanTestUtilsRule)
+[![Build Status](https://travis-ci.com/cdn77/PHPStanTestUtilsRule.svg?branch=master)](https://travis-ci.com/cdn77/PHPStanTestUtilsRule)
 [![Downloads](https://poser.pugx.org/cdn77/phpstan-test-utils-rule/d/total.svg)](https://packagist.org/packages/cdn77/phpstan-test-utils-rule)
 [![Packagist](https://poser.pugx.org/cdn77/phpstan-test-utils-rule/v/stable.svg)](https://packagist.org/packages/cdn77/phpstan-test-utils-rule)
 [![Licence](https://poser.pugx.org/cdn77/phpstan-test-utils-rule/license.svg)](https://packagist.org/packages/cdn77/phpstan-test-utils-rule)
