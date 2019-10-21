@@ -15,9 +15,9 @@
 composer require --dev cdn77/phpstan-test-utils-rule
 ```
 
-## CreateStub Extension
+## MakeStub Extension
 
-This extension helps PHPStan to determine return type from `createStub()` method provided by CreateStub Feature.
+This extension helps PHPStan to determine return type from `makeStub()` method provided by MakeStub Feature.
 
 *The extension must be extended by your extension class and located in your code base because Features are enabled using traits and there's no reliable way for PHPStan to determine from which trait a method comes in a class.*
 
@@ -30,10 +30,10 @@ declare(strict_types=1);
 
 namespace Your\Project\Tests\Utils\PHPStan\Extension;
 
-use Cdn77\TestUtils\PHPStan\CreateStubExtension;
+use Cdn77\TestUtils\PHPStan\MakeStubExtension;
 use Your\Project\Tests\BaseTestCase;
 
-final class CreateStub extends CreateStubExtension
+final class MakeStub extends MakeStubExtension
 {
     public function getClass() : string
     {
@@ -47,7 +47,7 @@ Create PHPStan config file for extensions:
 ```neon
 services:
     -
-        class: Your\Project\Tests\Utils\PHPStan\Extension\CreateStub
+        class: Your\Project\Tests\Utils\PHPStan\Extension\MakeStub
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
 ```

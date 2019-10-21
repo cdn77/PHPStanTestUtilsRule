@@ -14,13 +14,13 @@ use PHPStan\Type\ObjectType;
 use PHPStan\Type\Type;
 use function assert;
 
-abstract class CreateStubExtension implements DynamicMethodReturnTypeExtension
+abstract class MakeStubExtension implements DynamicMethodReturnTypeExtension
 {
     abstract public function getClass() : string;
 
     public function isMethodSupported(MethodReflection $methodReflection) : bool
     {
-        return $methodReflection->getName() === 'createStub';
+        return $methodReflection->getName() === 'makeStub';
     }
 
     public function getTypeFromMethodCall(
