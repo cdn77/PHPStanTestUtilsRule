@@ -12,11 +12,15 @@ use PHPStan\Reflection\MethodReflection;
 use PHPStan\Type\DynamicMethodReturnTypeExtension;
 use PHPStan\Type\ObjectType;
 use PHPStan\Type\Type;
+use PHPUnit\Framework\TestCase;
 use function assert;
 
-abstract class MakeStubExtension implements DynamicMethodReturnTypeExtension
+final class MakeStubExtension implements DynamicMethodReturnTypeExtension
 {
-    abstract public function getClass() : string;
+    public function getClass() : string
+    {
+        return TestCase::class;
+    }
 
     public function isMethodSupported(MethodReflection $methodReflection) : bool
     {
